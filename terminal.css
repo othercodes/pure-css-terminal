@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+div[id^=terminal-].g-content {
+  padding: 0;
+  margin: 0;
+}
+
+.terminal {
+  font: 1em "Inconsolata", monospace;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  padding-top: 10px;
+  width: 90%;
+  margin: 5em auto 0 auto;
+}
+.terminal .terminal-wrapper {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  transition: top 0.5s 0s cubic-bezier(0.1, 1.2, 0.3, 1), transform 0.5s 0s cubic-bezier(0.1, 1.2, 0.3, 1);
+}
+.terminal .terminal-wrapper.minimized {
+  transform: translate(0%, -30px);
+  top: 100%;
+}
+.terminal .terminal-wrapper.minimized .terminal-screen {
+  display: none;
+}
+.terminal .terminal-wrapper .terminal-toolbar {
+  background: #3b3b3b;
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 10px 0 5px 15px;
+}
+.terminal .terminal-wrapper .terminal-toolbar .terminal-btn {
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  display: inline-block;
+  cursor: pointer;
+}
+.terminal .terminal-wrapper .terminal-toolbar .terminal-btn.btn-close {
+  background: #b94a48;
+}
+.terminal .terminal-wrapper .terminal-toolbar .terminal-btn.btn-minimize {
+  background: #c09853;
+}
+.terminal .terminal-wrapper .terminal-toolbar .terminal-btn.btn-maximize {
+  background: #468847;
+}
+.terminal .terminal-wrapper .terminal-screen {
+  padding: 1em;
+}
+.terminal .terminal-wrapper .terminal-screen ::selection {
+  background: #eee;
+}
+.terminal .terminal-wrapper .terminal-screen ::-moz-selection {
+  background: #eee;
+}
+.terminal .terminal-wrapper .terminal-screen .term-section {
+  display: none;
+}
+.terminal .terminal-wrapper .terminal-screen .open {
+  display: block;
+}
+.terminal .terminal-wrapper .terminal-screen .command {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+.terminal .terminal-wrapper .terminal-screen .command .hostname {
+  color: #2980b9;
+}
+.terminal .terminal-wrapper .terminal-screen .command .pwd {
+  color: #468847;
+}
+.terminal .terminal-wrapper .terminal-screen a {
+  color: #2980b9 !important;
+}
+.terminal .terminal-wrapper .terminal-screen a:hover, .terminal .terminal-wrapper .terminal-screen a:focus {
+  color: #234264 !important;
+}
+.terminal .terminal-wrapper .terminal-screen h3 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.terminal .terminal-wrapper .terminal-screen p {
+  margin: 0;
+}
+.terminal .terminal-wrapper .terminal-screen p.help {
+  line-height: 2em;
+}
+.terminal .terminal-wrapper .terminal-screen abbr {
+  cursor: help;
+}
+.terminal .terminal-wrapper .terminal-screen ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+.terminal .terminal-wrapper .terminal-screen li {
+  margin: 0.5em 0 0;
+}
+.terminal .terminal-wrapper .terminal-screen span {
+  color: #999;
+}
+.terminal .terminal-wrapper .terminal-screen kbd {
+  font-family: "Inconsolata", monospace;
+  border: 1px solid #999;
+  text-transform: uppercase;
+  padding: 0 0.2em;
+}
+.terminal .terminal-wrapper .terminal-screen pre {
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+@media all and (max-width: 30rem) {
+  .terminal .terminal-wrapper .terminal-screen pre {
+    display: none;
+  }
+}
+.terminal .terminal-wrapper .terminal-screen input[type=text] {
+  max-width: 80%;
+  border: none;
+  font-family: inherit;
+  padding: 0 0.5em;
+  margin: 0;
+}
+.terminal .terminal-wrapper .terminal-screen input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+}
+.terminal .terminal-wrapper .terminal-screen input[type=text]:hover {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="terminal.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <script src="terminal.js"></script>
+    </head>
+    <body>
+
+    <div class="terminal" style="min-height: 650px;">
+        <div class="terminal-wrapper" id="xt-terminal-wrapper" style="background-color: #000;min-height: 650px;">
+            <div class="terminal-toolbar" id="xt-terminal-toolbar">
+                <div class="terminal-btn btn-close" id="xt-btn-close" title="Close"></div>
+                <div class="terminal-btn btn-minimize" id="xt-btn-minimize" title="Minimize"></div>
+                <div class="terminal-btn btn-maximize" id="xt-btn-maximize" title="Maximize"></div>
+                Terminal
+            </div>
+            <div class="terminal-screen" id="xt-terminal-screen" style="color: #999999;">
+
+                <div class="term-section" id="term-error">
+                    <div>Command not found!</div>
+                    <p class="help"><span>Type 'help' + <kbd>Enter</kbd>: for available commands.</span></p>
+                </div>
+
+                <div class="term-section" id="term-help">
+                    <div>&raquo; Help?</div>
+                    <p class="help"><span>Available commands:</span></p>
+                    <ul>
+                        <li>'help': displays this list</li>
+                    </ul>
+                    <p class="help"><span>Type [command] + <kbd>Enter</kbd></span></p>
+                </div>
+
+                <span class="command">
+                    <span class="hostname">hostname@user</span>:<span class="pwd">~</span>$
+                    <input type="text" id="terminal-input" style="background-color: #000;color: #ccc;"/>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
